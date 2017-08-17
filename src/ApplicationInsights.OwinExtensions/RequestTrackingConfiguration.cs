@@ -10,8 +10,8 @@ namespace ApplicationInsights.OwinExtensions
     {
         public TelemetryConfiguration TelemetryConfiguration { get; set; }
 
-        public Func<IOwinContext, Task<bool>> ShouldTrackRequest { get; set; }
+        public Func<IOwinContext, bool> ShouldTrackRequest { get; set; }
 
-        public Func<IOwinContext, Task<IEnumerable<KeyValuePair<string, string>>>> GetAdditionalContextProperties { get; set; }
+        public Func<IOwinContext, IEnumerable<KeyValuePair<string, string>>> GetAdditionalContextProperties { get; set; }
     }
 }
